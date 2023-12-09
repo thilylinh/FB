@@ -1,0 +1,43 @@
+.box-loader {
+    &.screen-page {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0px;
+        .loader {
+            width: 48px;
+            height: 48px;
+            border-width: 5px;
+        }
+    }
+    .loader {
+        width: 80px;
+        height: 80px;
+        border: 2px solid var(--color-main);
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+    }
+    .component__loader {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--color-main);
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

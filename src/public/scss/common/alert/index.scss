@@ -1,0 +1,36 @@
+.slide-down-enter-active {
+    animation: slide-down 0.5s forwards;
+}
+
+@keyframes slide-down {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        bottom: 2%;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.alert-container {
+    position: fixed;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 999;
+    background-color: var(--bg-alert);
+
+    .alert {
+        border-radius: 4px;
+        padding: 15px;
+    }
+
+    .default {
+        background-color: var(--bg-default);
+        color: var(--color-text-1);
+    }
+}

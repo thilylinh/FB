@@ -1,0 +1,82 @@
+.input-amount-container {
+  @include flex-space-between;
+  gap: 10px;
+  .amount__title {
+    font-size: calc(var(--font-size) + 4px);
+  }
+
+  .amount__input {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-main);
+    position: relative;
+    &--currency {
+      background-color: var(--bg-main-3);
+      padding: 8px 10px;
+      color: var(--color-text);
+    }
+    &--value {
+      width: 50px;
+      padding: 8px 0px;
+      border: none;
+      text-align: end;
+      background-color: unset;
+      font-size: calc(var(--font-size) + 2px);
+      &.custom {
+        color: var(--color-text-1);
+      }
+
+      &:focus {
+        outline: none; /* Loại bỏ border khi focus */
+      }
+    }
+    &--icon {
+      background-color: var(--bg-main-3);
+      padding: 8px 8px;
+      color: var(--color-text);
+      cursor: pointer;
+    }
+    .list-bet-amount {
+      position: absolute;
+      top: 35px;
+      width: 110px;
+      background-color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      border: 1px solid var(--border-main);
+      z-index: 9;
+      p {
+        border-bottom: 1px solid var(--border-main);
+        padding: 2px 0px;
+        color: var(--color-text);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 525px) {
+  .input-amount-container {
+    gap: 5px;
+    .amount__title {
+      font-size: var(--font-size);
+    }
+
+    .amount__input {
+      &--currency {
+        padding: 8px 8px;
+      }
+      &--value {
+        width: 40px;
+        font-size: var(--font-size);
+        text-align: center;
+      }
+      &--icon {
+        padding: 8px 5px;
+      }
+      .list-bet-amount {
+        width: 80px;
+      }
+    }
+  }
+}

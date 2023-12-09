@@ -1,0 +1,40 @@
+.number {
+  @include flex-center;
+  border-radius: 50%;
+  background-image: url("~@/public/images/bg/bg-number.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  cursor: pointer;
+  > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--bg-main-2);
+  }
+  &.default {
+    width: 54px;
+    height: 54px;
+    > span {
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+  &__in-list {
+    width: 30px;
+    height:30px;
+    > span {
+      width: 17px;
+      height: 17px;
+      font-size: 11px;
+      font-weight: bold;
+      color: var(--color-text);
+    }
+  }
+  &__selected {
+    background-color: var(--bg-number-selected) !important;
+  }
+}

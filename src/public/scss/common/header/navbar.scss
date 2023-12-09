@@ -1,0 +1,33 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .navbar-item {
+    padding: 5px 25px;
+    border-radius: 16px;
+    font-size: calc(var(--font-size) + 4px);
+    color: var(--color-text-1);
+    white-space: nowrap;
+    cursor: pointer;
+
+    &__game {
+      font-weight: bold;
+    }
+
+    &__active {
+      color: var(--color-text);
+      background-color: var(--bg-button);
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    overflow-x: scroll;
+    .navbar-item {
+      font-size: calc(var(--font-size) + 2px);
+    }
+  }
+}

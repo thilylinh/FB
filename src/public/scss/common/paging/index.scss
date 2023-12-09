@@ -1,0 +1,38 @@
+.pagination-container {
+  .pagination {
+    display: flex;
+    gap: 10px;
+    font-size: calc(var(--font-size) + 4px);
+    .page-item {
+      cursor: pointer;
+      padding: 10px;
+      color: var(--color-text-3);
+      font-weight: bold;
+
+      &.active {
+        color: var(--color-text);
+        border-bottom: 3px solid var(--color-text-4);
+      }
+    }
+  }
+}
+
+@media (max-width: 525px) {
+  .pagination-container {
+    .pagination {
+      gap: 5px;
+      font-size: var(--font-size);
+      .page-item {
+        cursor: pointer;
+        padding: 5px;
+        color: var(--color-text-3);
+        font-weight: bold;
+
+        &.active {
+          color: var(--color-text);
+          border-bottom: 3px solid var(--color-text-4);
+        }
+      }
+    }
+  }
+}

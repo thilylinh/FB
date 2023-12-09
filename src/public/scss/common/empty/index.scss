@@ -1,0 +1,8 @@
+.empty {
+    text-align: center;
+    margin: 10px 0px;
+    p {
+        font-size: calc(var(--font-size) + 6px);
+        font-weight: bold;
+    }
+}

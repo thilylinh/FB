@@ -1,0 +1,31 @@
+.header-container {
+    background-color: var(--bg-header-component);
+    display: flex;
+    flex-direction: column;
+    padding: 13px var(--padding-page);
+    color: var(--color-text-1);
+    .back-to-home {
+        font-size: calc(var(--font-size) + 3px);
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 13px 10px;
+    } 
+}
+
+@media (max-width: 525px) {
+    .header-container {
+        .nav-bar {
+            overflow-x: scroll;
+        }
+    }
+}
