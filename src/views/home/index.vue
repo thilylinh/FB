@@ -44,19 +44,19 @@
       </div>
     </div>
 
-    <div class="home-news-section mt-5">
+    <div class="home-news-section mt-4" v-for="(item, index) in news" :key="index">
       <h4 class="title">
-        News
+        {{ item.groupName }}
         <span class="watermark"></span>
       </h4>
-      <div class="row" v-for="(item, index) in news" :key="index">
+      <div class="row">
         <div class="col-md-4 mb-4" v-for="(detail, idx) in item.detail" :key="idx">
           <div class="card">
             <img class="card-img-top" :src="detail.avatarLink?.replace(/\\/g, '/')" />
             <div class="card-body">
-              <h5 class="card-title">{{ item.groupName }}</h5>
+              <h5 class="card-title"></h5>
               <h6>{{ detail.name }}</h6>
-              <p class="card-text">{{ detail.dateTimeStart }}</p>
+              <p class="card-text">{{ renderDate(detail.dateTimeStart) }}</p>
               <span class="btn btn-primary" @click="handleShowDetails(detail.id)">Read more</span>
             </div>
           </div>
@@ -68,7 +68,9 @@
 </template>
 <script>
 import HomeService from "@/services/home/index.service.ts"
+import utilsMixins from "@/mixins/function-utils";
 export default {
+  mixins: [utilsMixins], 
   data() {
     return {
       news: [],
