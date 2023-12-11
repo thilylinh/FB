@@ -18,7 +18,11 @@ export default {
     methods: {
         async handleInitData() {
             try {
-                let res = await HomeService.getNewsDetails(this.$route.params.id);
+                const params = this.$route.params.id
+                const parts = params.split('-');
+                // Lấy phần tử cuối cùng của mảng parts
+                const id = parts[parts.length - 1];
+                let res = await HomeService.getNewsDetails(id);
                 console.log(res)
                 if (res.code == 200) {
                     this.dataDetails = res.data
