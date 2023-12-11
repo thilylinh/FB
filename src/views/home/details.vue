@@ -1,14 +1,20 @@
 <template>
-    <div class="container">
-        <h5>{{ dataDetails.name }}</h5>
-        <p v-html="dataDetails.content"></p>
+    <div class="details">
+        <Loading v-if="isLoading" />
+        <div v-else class="container">
+            <h5>{{ dataDetails.name }}</h5>
+            <p v-html="dataDetails.content"></p>
+        </div>
     </div>
 </template>
 <script>
 import HomeService from "@/services/home/index.service.ts"
+import Loading from '@/components/common/loading/loading.vue'
 export default {
+    components: { Loading },
     data() {
         return {
+            isLoading: false,
             dataDetails: {}
         }
     },
@@ -18,6 +24,7 @@ export default {
     methods: {
         async handleInitData() {
             try {
+                this.isLoading = true;
                 const params = this.$route.params.id
                 const parts = params.split('-');
                 // Lấy phần tử cuối cùng của mảng parts
@@ -26,11 +33,20 @@ export default {
                 console.log(res)
                 if (res.code == 200) {
                     this.dataDetails = res.data
+                    this.isLoading = false;
                 }
             } catch (error) {
+                this.isLoading = false;
                 console.log(error)
             }
         }
     }
 }
 </script>
+<style lang="scss" scoped> .details {
+     min-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+</style>

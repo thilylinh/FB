@@ -16,10 +16,18 @@
 
   .home-news-section {
     background-color: #fbf8f5;
-    padding: 20px;
+    padding: 20px 100px;
+    border-radius: 10px;
     .title {
       color: #0d1e50;
       font-weight: 700;
+    }
+  }
+}
+@media (max-width: 525px) {
+  .home {
+    .home-news-section {
+      padding: 20px 30px
     }
   }
 }
