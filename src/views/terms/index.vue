@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-3 mb-4">
+    <div class="container mt-3 mb-4 terms-container">
         <h5>Terms & Conditions</h5>
         <hr />
         <div class="pb-content">
@@ -127,3 +127,15 @@ export default {
 
 }
 </script>
+
+<style scoped lang="scss">
+.terms-container {
+    max-width: 768px;
+}
+
+@media (max-width: 525px) {
+    .terms-container {
+        max-width: unset;
+    }
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-3 mb-4">
+    <div class="container mt-3 mb-4 privacy-container">
         <h5>Privacy Policy</h5>
         <hr />
         <div class="post-content" style="height: auto !important;">
@@ -388,16 +388,6 @@
 
             <p>We show ads on some of our users’ sites as well as some of our own, and the revenue they generate lets us
                 offer free access to some of our Services so that money doesn’t become an obstacle to having a voice.</p>
-            <div class="google-auto-placed ap_container"
-                style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto"
-                    class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-2661265869682509"
-                    data-adsbygoogle-status="done"
-                    style="display: block; margin: auto; background-color: transparent; height: 280px;">
-                    <div id="aswift_7_host"
-                        style="border: none; height: 280px; width: 567px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;">
-                    </div>
-                </ins></div>
-
 
 
             <p>Under a new California law, the California Consumer Privacy Act (“CCPA”), some personalized advertising you
@@ -417,17 +407,6 @@
             <p>That means information like your public profile, posts, other content that you make public on your website,
                 and your “Likes” and comments on other websites are all available to others — and we hope they get a lot of
                 views!</p>
-            <div class="google-auto-placed ap_container"
-                style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto"
-                    class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-2661265869682509"
-                    data-adsbygoogle-status="done"
-                    style="display: block; margin: auto; background-color: transparent; height: 280px;">
-                    <div id="aswift_8_host"
-                        style="border: none; height: 280px; width: 567px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;">
-                    </div>
-                </ins></div>
-
-
 
             <p>Please keep all of this in mind when deciding what you would like to share publicly.</p>
 
@@ -692,3 +671,15 @@ export default {
 
 }
 </script>
+
+<style scoped lang="scss">
+.privacy-container {
+    max-width: 768px;
+}
+
+@media (max-width: 525px) {
+    .privacy-container {
+        max-width: unset;
+    }
+}
+</style>

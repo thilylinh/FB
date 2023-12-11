@@ -4,12 +4,11 @@
       <a class="navbar-brand" href="/">
         <img class="logo" :src="logo" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button @click="openMenu" class="navbar-toggler">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-end">
+      <div class="collapse navbar-collapse" :class="{'show': isShow}">
+        <ul class="navbar-nav mb-lg-0 align-items-end">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
@@ -32,9 +31,17 @@
 export default {
   data() {
     return {
+      isShow: false,
       logo: require("@/public/images/logo.png")
     }
   },
+  methods: {
+    openMenu() {
+      if (window.innerWidth <= 525) {
+        this.isShow = !this.isShow;
+      }
+    }
+  }
 };
 </script>
 <style lang="scss">

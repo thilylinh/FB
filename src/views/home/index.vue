@@ -1,7 +1,7 @@
 <template>
   <div class="home container">
-    <div class="row">
-      <div class="col-md-6">
+    <div class="row mt-3">
+      <div class="col-md-6 banner-custom">
         <div class="banner">
           <img class="banner--image"
             src="https://backtheme.tech/products/wordpress/neoton/wp-content/uploads/2022/09/travel2-600x600.jpg" />
@@ -28,7 +28,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row mt-3">
           <div class="banner">
             <img class="banner--image"
               src="https://backtheme.tech/products/wordpress/neoton/wp-content/uploads/2022/09/travel3.jpg" />

@@ -1,5 +1,5 @@
 <template>
-    <div class="details">
+    <div class="details mt-5">
         <Loading v-if="isLoading" />
         <div v-else class="container">
             <h5>{{ dataDetails.name }}</h5>
@@ -43,10 +43,25 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped> .details {
-     min-height: 100vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
+<style lang="scss" scoped>
+.details {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+
+@media (max-width: 525px) {
+    .details {
+        max-width: unset;
+    }
+
+}
 </style>

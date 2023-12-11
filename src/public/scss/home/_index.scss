@@ -1,4 +1,9 @@
 .home {
+  .banner-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .banner {
     position: relative;
     &--image {
@@ -27,7 +32,7 @@
 @media (max-width: 525px) {
   .home {
     .home-news-section {
-      padding: 20px 30px
+      padding: 20px 30px;
     }
   }
 }
