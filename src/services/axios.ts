@@ -1,26 +1,10 @@
 /* eslint-disable */
-import { getStateStore, isObjEmpty, isStrEmpty } from "@/utils/utils";
+import { isObjEmpty, isStrEmpty } from "@/utils/utils";
 import axiosLib from "axios";
 
 const axiosAuth = axiosLib.create();
 
 axiosAuth.interceptors.request.use((request) => {
-    const state = getStateStore();
-    const token = state.token || "";
-    const setting = state.configDevice;
-
-    if (!isStrEmpty(token)) {
-        request.headers.Authorization = token;
-        request.headers.ContentType = "application/json";
-    }
-
-    if (!isObjEmpty(setting)) {
-        request.headers["Device-Network-Mac-Address"] = setting.mac;
-        request.headers["Device-Serial-Number"] = setting.serial;
-        request.headers["Device-Unique-Id"] = setting.uniqueId;
-        request.headers["App-Version"] = setting.appVersion;
-    }
-
     return request;
 });
 

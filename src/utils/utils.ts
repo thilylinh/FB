@@ -1,5 +1,4 @@
 /* eslint-disable */
-import store from "@/store";
 
 export const isStrEmpty = (str: string): boolean => {
   return !str || str.length === 0 || str === "undefined";
@@ -15,22 +14,6 @@ export const isArrayEmpty = (arr: any[]): boolean => {
 
 export const parseProxyObject = (obj: object) => {
   return JSON.parse(JSON.stringify(obj));
-};
-
-export const getStateVueX = () => {
-  return JSON.parse(JSON.stringify(store.state));
-};
-
-export const getQueryParams = () => {
-  const state = getStateVueX();
-  const queryParams = state.queryParams;
-  return queryParams;
-};
-
-export const getStateStore = () => {
-  const state = getStateVueX();
-  const config = state;
-  return config;
 };
 
 export const formatDateUTC = (date: string | Date, timeZone = 0) => {
