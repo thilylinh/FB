@@ -675,6 +675,7 @@ export default {
 <style scoped lang="scss">
 .privacy-container {
     max-width: 768px;
+    font-size: 16px;
 }
 
 @media (max-width: 525px) {

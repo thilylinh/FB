@@ -51,6 +51,7 @@ export default {
     align-items: center;
     max-width: 768px;
     margin: 0 auto;
+    font-size: 16px;
 }
 
 img {
