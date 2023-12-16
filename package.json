@@ -1,5 +1,4 @@
 {
-    "name": "Numbers",
     "version": "1.1.0",
     "private": true,
     "scripts": {
@@ -14,7 +13,6 @@
         "vue": "^3.2.13",
         "vue-class-component": "^8.0.0-0",
         "vue-router": "^4.0.3",
-        "vuex": "^4.0.0",
         "yarn": "^1.22.19"
     },
     "devDependencies": {

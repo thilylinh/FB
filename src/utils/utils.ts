@@ -8,13 +8,6 @@ export const isObjEmpty = (obj: any[]): boolean => {
   return !obj || Object.keys(obj).length === 0;
 };
 
-export const isArrayEmpty = (arr: any[]): boolean => {
-  return !arr || arr.length === 0 || !Array.isArray(arr);
-};
-
-export const parseProxyObject = (obj: object) => {
-  return JSON.parse(JSON.stringify(obj));
-};
 
 export const formatDateUTC = (date: string | Date, timeZone = 0) => {
   const dateTimeString = date;
@@ -101,33 +94,4 @@ export const formatPrice = (number: number, decimal = 2) => {
     maximumFractionDigits: decimal,
   });
   return formatter.format(number);
-};
-
-export const compareDates = (
-  date1: string | Date,
-  date2: string | Date,
-  timeZone = 0
-) => {
-  const formattedDate1 = formatDateUTC(date1, timeZone);
-  const formattedDate2 = formatDateUTC(date2, timeZone);
-
-  const d1 = new Date(
-    `${formattedDate1.year}-${formattedDate1.month}-${formattedDate1.day}T${formattedDate1.hour}:${formattedDate1.minutes}:${formattedDate1.seconds}`
-  );
-
-  const d2 = new Date(
-    `${formattedDate2.year}-${formattedDate2.month}-${formattedDate2.day}T${formattedDate2.hour}:${formattedDate2.minutes}:${formattedDate2.seconds}`
-  );
-
-  if (d1.getTime() < d2.getTime()) {
-    return -1;
-  } else if (d1 > d2) {
-    return 1;
-  } else {
-    return 0;
-  }
-};
-
-export const toFixNumber = (number: number, numberFix: number = 2) => {
-  return number.toFixed(numberFix);
 };

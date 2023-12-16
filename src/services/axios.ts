@@ -1,5 +1,4 @@
 /* eslint-disable */
-import { isObjEmpty, isStrEmpty } from "@/utils/utils";
 import axiosLib from "axios";
 
 const axiosAuth = axiosLib.create();
@@ -21,12 +20,3 @@ axiosAuth.interceptors.response.use(
 );
 
 export default axiosAuth;
-
-
-export function setDataLanguage(data: any) {
-    localStorage.setItem('dataLanguage', data)
-}
-
-export function getDataLanguage() {
-    return localStorage.getItem('dataLanguage')
-}
