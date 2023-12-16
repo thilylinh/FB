@@ -12,6 +12,6 @@ export default {
     components: { Header, Footer },
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@/public/scss/main.scss';
 </style>

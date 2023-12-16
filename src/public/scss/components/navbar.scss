@@ -4,8 +4,11 @@
   padding: 10px 0;
 }
 
+.toggle-btn {
+  display: none;
+}
+
 .header-item {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,11 +20,6 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.logo {
-  width: 50px;
-  height: auto;
 }
 
 .menu-container {
@@ -67,12 +65,17 @@
   }
 
   .toggle-btn {
-    margin-left: auto; /* Move the button to the right */
+    display: block;
+    margin-left: auto;
   }
 
   .menu-container {
     width: 100%;
     margin: unset;
+  }
+
+  .header-item {
+    width: 100%;
   }
 
   .nav-list {

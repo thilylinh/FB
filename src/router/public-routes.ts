@@ -9,17 +9,11 @@ const publicRoutes: Array<RouteRecordRaw> = [
     {
         path: '/',
         name: 'Home Page',
-        meta: {
-            isHomePage: true
-        },
         component: HomePage,
     },
     {
         path: '/:id',
         name: 'Details',
-        meta: {
-            isHomePage: true
-        },
         component: NewDetails,
     },
     {

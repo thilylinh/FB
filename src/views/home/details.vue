@@ -1,7 +1,7 @@
 <template>
-    <div class="details mt-5">
+    <div class="details">
         <Loading v-if="isLoading" />
-        <div v-else class="container">
+        <div v-else>
             <h5>{{ dataDetails.name }}</h5>
             <p v-html="dataDetails.content"></p>
         </div>
@@ -46,11 +46,8 @@ export default {
 <style lang="scss" scoped>
 .details {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     max-width: 768px;
-    margin: 0 auto;
+    margin: 50px auto;
     font-size: 16px;
 }
 
@@ -58,11 +55,9 @@ img {
     width: 100%;
 }
 
-
 @media (max-width: 525px) {
     .details {
         max-width: unset;
     }
-
 }
 </style>

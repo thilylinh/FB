@@ -2,7 +2,8 @@
   <nav class="navbar">
     <div class="container">
       <div class="header-item">
-        <img class="logo" :src="logo" alt="logo" />
+        <img class="logo" height="29" width="50" :src="logo" alt="logo"
+          sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, 960px" :srcset="`${logo} 480w`" />
         <button class="toggle-btn" @click="openMenu">Menu</button>
       </div>
       <div class="menu-container">
@@ -23,14 +24,11 @@ export default {
   data() {
     return {
       isShow: false,
-      logo: require("@/public/images/logo.png")
+      logo: require("@/public/images/logo.jpg")
     }
   },
   methods: {
     openMenu() {
-      // if (window.innerWidth <= 525) {
-      //   this.isShow = !this.isShow;
-      // }
       const navList = document.getElementById('navList');
       navList.classList.toggle('show')
     }
