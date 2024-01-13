@@ -11,9 +11,9 @@
             <div class="banner--infor">
               <h4>Name</h4>
               <p>Was this the worst night in discoures fashion history?</p>
-              <span class="back-date">
+              <!-- <span class="back-date">
                 <i class="bi bi-calendar"></i>
-                September 20, 2022</span>
+                September 20, 2022</span> -->
             </div>
           </div>
         </div>
@@ -25,9 +25,9 @@
             <div class="banner--infor">
               <h4>Name</h4>
               <p>Was this the worst night in discoures fashion history?</p>
-              <span class="back-date">
+              <!-- <span class="back-date">
                 <i class="bi bi-calendar"></i>
-                September 20, 2022</span>
+                September 20, 2022</span> -->
             </div>
           </div>
           <div class="banner">
@@ -37,9 +37,9 @@
             <div class="banner--infor">
               <h4>Name</h4>
               <p>Was this the worst night in discoures fashion history?</p>
-              <span class="back-date">
+              <!-- <span class="back-date">
                 <i class="bi bi-calendar"></i>
-                September 20, 2022</span>
+                September 20, 2022</span> -->
             </div>
           </div>
           <div class="banner">
@@ -49,9 +49,9 @@
             <div class="banner--infor">
               <h4>Name</h4>
               <p>Was this the worst night in discoures fashion history?</p>
-              <span class="back-date">
+              <!-- <span class="back-date">
                 <i class="bi bi-calendar"></i>
-                September 20, 2022</span>
+                September 20, 2022</span> -->
             </div>
           </div>
           <div class="banner">
@@ -61,9 +61,9 @@
             <div class="banner--infor">
               <h4>Name</h4>
               <p>Was this the worst night in discoures fashion history?</p>
-              <span class="back-date">
+              <!-- <span class="back-date">
                 <i class="bi bi-calendar"></i>
-                September 20, 2022</span>
+                September 20, 2022</span> -->
             </div>
           </div>
         </div>
