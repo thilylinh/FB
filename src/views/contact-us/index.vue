@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-3 mb-4 about-container">
+    <div class="about-container">
         <h5>About Us</h5>
         <hr />
         <p>
@@ -41,6 +41,7 @@ export default {
 </script>
 <style scoped lang="scss">
 .about-container {
+    margin: 50px auto;
     max-width: 768px;
     min-height: 100vh;
     font-size: 16px;

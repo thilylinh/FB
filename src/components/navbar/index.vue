@@ -2,8 +2,7 @@
   <nav class="navbar">
     <div class="container">
       <div class="header-item">
-        <img class="logo" height="29" width="50" :src="logo" alt="logo"
-          sizes="(max-width: 600px) 480px, (max-width: 900px) 720px, 960px" :srcset="`${logo} 480w`" />
+        <img class="logo" height="29" width="50" :src="logo" alt="logo" />
         <button class="toggle-btn" @click="openMenu">Menu</button>
       </div>
       <div class="menu-container">

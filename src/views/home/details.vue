@@ -10,6 +10,8 @@
 <script>
 import HomeService from "@/services/home/index.service.ts"
 import Loading from '@/components/common/loading/loading.vue'
+import { useHead } from '@vueuse/head'
+
 export default {
     components: { Loading },
     data() {
@@ -30,9 +32,17 @@ export default {
                 // Lấy phần tử cuối cùng của mảng parts
                 const id = parts[parts.length - 1];
                 let res = await HomeService.getNewsDetails(id);
-                console.log(res)
                 if (res.code == 200) {
                     this.dataDetails = res.data
+                    useHead({
+                        meta: [
+                            {
+                                property: "og:title",
+                                content: res.data.name,
+                            },
+                        ],
+
+                    })
                     this.isLoading = false;
                 }
             } catch (error) {
@@ -49,15 +59,27 @@ export default {
     max-width: 768px;
     margin: 50px auto;
     font-size: 16px;
+
+    .image {
+        width: 100%;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 img {
     width: 100%;
+    height: auto;
 }
 
 @media (max-width: 525px) {
     .details {
         max-width: unset;
+        padding: 0 10px;
     }
 }
 </style>

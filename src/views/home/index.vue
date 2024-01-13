@@ -1,9 +1,9 @@
 <template>
-  <div class="home container">
+  <div class="home">
     <Loading v-if="isLoading" />
     <template v-else>
-      <div class="row mt-3">
-        <div class="col-md-6 banner-custom">
+      <div class="banner-container">
+        <div class="banner-item banner-custom">
           <div class="banner">
             <img class="banner--image" decoding="async" fetchpriority="high"
               sizes="(max-width: 600px) 480px, (max-width: 800px) 720px, 1200px"
@@ -18,7 +18,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="banner-item">
           <div class="row">
             <div class="banner">
               <img class="banner--image" decoding="async" fetchpriority="high"
@@ -52,22 +52,20 @@
         </div>
       </div>
 
-      <div class="home-news-section mt-4" v-for="(item, index) in news" :key="index">
+      <div class="home-news-section" v-for="(item, index) in news" :key="index">
         <h4 class="title">
           {{ item.groupName }}
           <span class="watermark"></span>
         </h4>
-        <div class="row">
-          <div class="col-md-4 mb-4" v-for="(detail, idx) in item.detail" :key="idx">
+        <div class="content">
+          <div class="content--item" v-for="(detail, idx) in item.detail" :key="idx">
             <div class="card">
               <img class="card-img-top" decoding="async" fetchpriority="high"
-                sizes="(max-width: 600px) 480px, (max-width: 800px) 720px, 1200px"
                 :src="detail.avatarLink?.replace(/\\/g, '/')" :alt="detail.name" loading="lazy" />
               <div class="card-body">
-                <h5 class="card-title"></h5>
-                <h6>{{ detail.name }}</h6>
+                <h5>{{ detail.name }}</h5>
                 <p class="card-text">{{ renderDate(detail.dateTimeStart) }}</p>
-                <span class="btn btn-primary" @click="handleShowDetails(detail.id)">Read more</span>
+                <button class="btn-primary" @click="handleShowDetails(detail.id)">Read more</button>
               </div>
             </div>
           </div>
@@ -113,4 +111,6 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>@import "@/public/scss/home/_index.scss";</style>
+<style lang="scss" scoped>
+@import "@/public/scss/home/_index.scss";
+</style>

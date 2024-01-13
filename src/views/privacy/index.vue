@@ -1,10 +1,8 @@
 <template>
-    <div class="container mt-3 mb-4 privacy-container">
+    <div class="privacy-container">
         <h5>Privacy Policy</h5>
         <hr />
         <div class="post-content" style="height: auto !important;">
-
-
             <p>*This Site is affiliated with Monumetric (dba for The Blogger Network, LLC) for the purposes of placing
                 advertising on the Site, and Monumetric will collect and use certain data for advertising purposes. To learn
                 more about Monumetric’s data usage, click here:&nbsp;<a
@@ -676,6 +674,7 @@ export default {
 .privacy-container {
     max-width: 768px;
     font-size: 16px;
+    margin: 50px auto;
 }
 
 @media (max-width: 525px) {

@@ -6,7 +6,7 @@ class IndexService extends BaseService {
     getListNews() {
         return this.get(`${VUE_APP_API_URL}/News/news-list`).then(({ data }) => data)
     }
-    getNewsDetails(id: any) {
+    getNewsDetails(id: string) {
         return this.get(`${VUE_APP_API_URL}/News/news-detail?id=${id}`).then(({ data }) => data)
     }
 }

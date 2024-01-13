@@ -1,24 +1,22 @@
-/* eslint-disable */
-// import axios from 'axios';
-import axiosAuth from "@/services/axios";
+import axios from 'axios';
 
 class BaseService {
-  get<T = unknown>(url: string, data?: unknown) {
-    return axiosAuth.get(url, {
+  get(url: string, data?: unknown) {
+    return axios.get(url, {
       data,
     });
   }
 
-  post<T = unknown>(url: string, data: unknown) {
-    return axiosAuth.post(url, data);
+  post(url: string, data: unknown) {
+    return axios.post(url, data);
   }
 
-  put<T = unknown>(url: string, data: unknown) {
-    return axiosAuth.put(url, data);
+  put(url: string, data: unknown) {
+    return axios.put(url, data);
   }
 
-  delete<T = unknown>(url: string) {
-    return axiosAuth.delete(url);
+  delete(url: string) {
+    return axios.delete(url);
   }
 }
 

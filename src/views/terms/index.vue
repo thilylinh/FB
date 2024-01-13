@@ -1,5 +1,5 @@
 <template>
-    <div class="container mt-3 mb-4 terms-container">
+    <div class="terms-container">
         <h5>Terms & Conditions</h5>
         <hr />
         <div class="pb-content">
@@ -132,6 +132,7 @@ export default {
 .terms-container {
     max-width: 768px;
     font-size: 16px;
+    margin: 50px auto;
 }
 
 @media (max-width: 525px) {

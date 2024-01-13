@@ -7,11 +7,11 @@
         "lint": "vue-cli-service lint"
     },
     "dependencies": {
+        "@vueuse/head": "^2.0.0",
         "axios": "^1.4.0",
-        "bootstrap": "^5.3.2",
-        "core-js": "^3.8.3",
+        "mini-css-extract-plugin": "^2.7.6",
+        "terser-webpack-plugin": "^5.3.9",
         "vue": "^3.2.13",
-        "vue-class-component": "^8.0.0-0",
         "vue-router": "^4.0.3",
         "yarn": "^1.22.19"
     },

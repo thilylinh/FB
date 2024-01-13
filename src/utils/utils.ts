@@ -1,14 +1,3 @@
-/* eslint-disable */
-
-export const isStrEmpty = (str: string): boolean => {
-  return !str || str.length === 0 || str === "undefined";
-};
-
-export const isObjEmpty = (obj: any[]): boolean => {
-  return !obj || Object.keys(obj).length === 0;
-};
-
-
 export const formatDateUTC = (date: string | Date, timeZone = 0) => {
   const dateTimeString = date;
   const dateTime = new Date(dateTimeString);
@@ -32,7 +21,8 @@ export const formatDateUTC = (date: string | Date, timeZone = 0) => {
   ];
 
   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
+  // eslint-disable-next-line
+  /* eslint-disable */
   const options: any = {
     day: "2-digit",
     month: "numeric",
@@ -54,7 +44,7 @@ export const formatDateUTC = (date: string | Date, timeZone = 0) => {
     dateTime.getMonth(),
     dateTime.getDate() - dateTime.getDay() + 1
   );
-  const weekDates: any = [];
+  const weekDates = [];
 
   for (let i = 0; i < 7; i++) {
     const date = new Date(
@@ -86,12 +76,4 @@ export const formatDateUTC = (date: string | Date, timeZone = 0) => {
   };
 
   return result;
-};
-
-export const formatPrice = (number: number, decimal = 2) => {
-  const formatter = new Intl.NumberFormat("en-US", {
-    minimumFractionDigits: decimal,
-    maximumFractionDigits: decimal,
-  });
-  return formatter.format(number);
 };
