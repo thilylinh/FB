@@ -1,6 +1,6 @@
 <template>
     <div class="terms-container">
-        <h5>Terms & Conditions</h5>
+        <h1>Terms & Conditions</h1>
         <hr />
         <div class="pb-content">
             <div class="entry-content">
@@ -138,6 +138,7 @@ export default {
 @media (max-width: 525px) {
     .terms-container {
         max-width: unset;
+        padding: 10px;
     }
 }
 </style>

@@ -3,11 +3,10 @@
     <Loading v-if="isLoading" />
     <template v-else>
       <div class="banner-container">
-        <div class="banner-item banner-custom">
+        <div class="banner-custom">
           <div class="banner">
             <img class="banner--image" decoding="async" fetchpriority="high"
-              sizes="(max-width: 600px) 480px, (max-width: 800px) 720px, 1200px"
-              src="https://backtheme.tech/products/wordpress/neoton/wp-content/uploads/2022/09/travel2-600x600.jpg"
+              sizes="(max-width: 600px) 480px, (max-width: 800px) 720px, 1200px" src="../../public/images/hinh0.png"
               alt="anh 1" loading="lazy" />
             <div class="banner--infor">
               <h4>Name</h4>
@@ -19,34 +18,52 @@
           </div>
         </div>
         <div class="banner-item">
-          <div class="row">
-            <div class="banner">
-              <img class="banner--image" decoding="async" fetchpriority="high"
-                sizes="(max-width: 600px) 480px, (max-width: 800px) 720px, 1200px"
-                src="https://backtheme.tech/products/wordpress/neoton/wp-content/uploads/2022/09/tavel4-1024x576.jpg"
-                alt="anh 2" loading="lazy" />
-              <div class="banner--infor">
-                <h4>Name</h4>
-                <p>Was this the worst night in discoures fashion history?</p>
-                <span class="back-date">
-                  <i class="bi bi-calendar"></i>
-                  September 20, 2022</span>
-              </div>
+          <div class="banner">
+            <img class="banner--image" decoding="async" fetchpriority="high"
+              sizes="(max-width: 600px) 480px, (max-width: 800px) 720px, 1200px" src="../../public/images/hinh1.png"
+              alt="anh 2" loading="lazy" />
+            <div class="banner--infor">
+              <h4>Name</h4>
+              <p>Was this the worst night in discoures fashion history?</p>
+              <span class="back-date">
+                <i class="bi bi-calendar"></i>
+                September 20, 2022</span>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="banner">
-              <img class="banner--image" decoding="async" fetchpriority="high"
-                sizes="(max-width: 600px) 480px, (max-width: 800px) 720px, 1200px"
-                src="https://backtheme.tech/products/wordpress/neoton/wp-content/uploads/2022/09/travel3.jpg" alt="anh 3"
-                loading="lazy" />
-              <div class="banner--infor">
-                <h4>Name</h4>
-                <p>Was this the worst night in discoures fashion history?</p>
-                <span class="back-date">
-                  <i class="bi bi-calendar"></i>
-                  September 20, 2022</span>
-              </div>
+          <div class="banner">
+            <img class="banner--image" decoding="async" fetchpriority="high"
+              sizes="(max-width: 600px) 480px, (max-width: 800px) 720px, 1200px" src="../../public/images/hinh2.png"
+              alt="anh 3" loading="lazy" />
+            <div class="banner--infor">
+              <h4>Name</h4>
+              <p>Was this the worst night in discoures fashion history?</p>
+              <span class="back-date">
+                <i class="bi bi-calendar"></i>
+                September 20, 2022</span>
+            </div>
+          </div>
+          <div class="banner">
+            <img class="banner--image" decoding="async" fetchpriority="high"
+              sizes="(max-width: 600px) 480px, (max-width: 800px) 720px, 1200px" src="../../public/images/hinh3.png"
+              alt="anh 2" loading="lazy" />
+            <div class="banner--infor">
+              <h4>Name</h4>
+              <p>Was this the worst night in discoures fashion history?</p>
+              <span class="back-date">
+                <i class="bi bi-calendar"></i>
+                September 20, 2022</span>
+            </div>
+          </div>
+          <div class="banner">
+            <img class="banner--image" decoding="async" fetchpriority="high"
+              sizes="(max-width: 600px) 480px, (max-width: 800px) 720px, 1200px" src="../../public/images/hinh4.png"
+              alt="anh 3" loading="lazy" />
+            <div class="banner--infor">
+              <h4>Name</h4>
+              <p>Was this the worst night in discoures fashion history?</p>
+              <span class="back-date">
+                <i class="bi bi-calendar"></i>
+                September 20, 2022</span>
             </div>
           </div>
         </div>

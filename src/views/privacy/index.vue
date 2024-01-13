@@ -1,6 +1,6 @@
 <template>
     <div class="privacy-container">
-        <h5>Privacy Policy</h5>
+        <h1>Privacy Policy</h1>
         <hr />
         <div class="post-content" style="height: auto !important;">
             <p>*This Site is affiliated with Monumetric (dba for The Blogger Network, LLC) for the purposes of placing
@@ -680,6 +680,7 @@ export default {
 @media (max-width: 525px) {
     .privacy-container {
         max-width: unset;
+        padding: 10px;
     }
 }
 </style>
