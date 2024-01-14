@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="container">
       <div class="header-item">
-        <img class="logo" height="29" width="50" :src="logo" alt="logo" />
+        <img class="logo" src="../../public/images/logo.png" alt="logo" />
         <button class="toggle-btn" @click="openMenu">Menu</button>
       </div>
       <div class="menu-container">

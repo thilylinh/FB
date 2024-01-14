@@ -43,10 +43,11 @@
     background-color: #fbf8f5;
     padding: 20px 200px;
     border-radius: 10px;
-    margin-top: 30px;
+    margin-top: 45px;
     .title {
       color: #0d1e50;
       font-weight: 700;
+      margin-bottom: 30px;
     }
     .content {
       display: flex;
@@ -61,22 +62,33 @@
           font-size: 16px;
           display: flex;
           flex-direction: column;
-          padding: 10px;
+          // padding: 10px;
           background-color: #fff;
           border-radius: 5px;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+
+          .card-body {
+            padding: 20px 15px 15px 15px;
+            h5 {
+              display: -webkit-box;
+              -webkit-line-clamp: 2; /* Số dòng tối đa trước khi cắt chữ */
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              font-size: 16px;
+              color: #0d1e50;
+              margin-bottom: 10px;
+            }
+            .card-text {
+              margin-bottom: 10px;
+            }
+          }
         }
       }
     }
   }
 
-  .btn-primary {
-    background-color: #0846ff;
-    color: #fff;
-    padding: 5px 10px;
+  .btn-read-more {
     margin-top: 5px;
-    border-radius: 5px;
-    border: unset;
     cursor: pointer;
   }
 }
@@ -110,7 +122,8 @@
     }
 
     .banner--infor {
-      p, span {
+      p,
+      span {
         font-size: 12px;
       }
     }

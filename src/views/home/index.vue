@@ -70,10 +70,10 @@
       </div>
 
       <div class="home-news-section" v-for="(item, index) in news" :key="index">
-        <h4 class="title">
+        <h2 class="title">
           {{ item.groupName }}
           <span class="watermark"></span>
-        </h4>
+        </h2>
         <div class="content">
           <div class="content--item" v-for="(detail, idx) in item.detail" :key="idx">
             <div class="card">
@@ -81,8 +81,8 @@
                 :src="detail.avatarLink?.replace(/\\/g, '/')" :alt="detail.name" loading="lazy" />
               <div class="card-body">
                 <h5>{{ detail.name }}</h5>
-                <p class="card-text">{{ renderDate(detail.dateTimeStart) }}</p>
-                <button class="btn-primary" @click="handleShowDetails(detail.id)">Read more</button>
+                <!-- <p class="card-text">{{ renderDate(detail.dateTimeStart) }}</p> -->
+                <span class="btn-read-more" @click="handleShowDetails(detail.id)">Read more</span>
               </div>
             </div>
           </div>
